@@ -54,12 +54,12 @@ const [flagAudio, setFlagAudio] = useState(false);
     }
   }
 
-   const insertImage = (poster) => {
+  const insertImage = (poster, customStyle) => {
 
     if (poster!=null)
     {
       return <Image
-                style={styles.image}
+                style={[styles.image, customStyle]}
                 source={{ 
                   uri:
                     'https://image.tmdb.org/t/p/w185/' + poster,
@@ -69,7 +69,7 @@ const [flagAudio, setFlagAudio] = useState(false);
 
     else{
       return <Image
-                style={styles.image}
+                style={[styles.image, customStyle]}
                 source={{ 
                   uri:
                     'https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/red-(2016)-et00046748-21-09-2016-06-28-07.jpg'
